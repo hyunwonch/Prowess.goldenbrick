@@ -186,11 +186,11 @@ def store_binary_1(data, filename='input.txt', zero_padding=0, mid_zeros=None):
         else:
             for idx, val in enumerate(data):
                 write_zeros(file, mid_zeros_map.get(idx, 0), width_bits)
-                val_bits = val.view(np.uint16)  
+                val_bits = val.view(np.uint16)
                 file.write(f"{val_bits:016b}\n")
 
 
-def generate_fp16(size=10, complex=False, seed=42):
+def generate_fp16(size=10, complex=True, seed=42):
     random.seed(seed)
     data = []
     for _ in range(size):
