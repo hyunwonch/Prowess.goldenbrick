@@ -2,7 +2,7 @@ classdef energy_det < baseProcessors.baseTrigger
     % energy_det   Magnitude squared energy detector with exponential
     % smoothing
     % This class inherits the WISCASim baseProcessor parent class and
-    % implements a magnitude-squared energy detector with a parameterizable 
+    % implements a magnitude-squared energy detector with a parameterizable
     % exponential smoother at the output
     %
     % myClass Properties:

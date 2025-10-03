@@ -17,7 +17,7 @@ classdef qam_det < baseProcessors.baseTrigger
 
         %% SIGNAL PROCESSING METHOD
         function out = process(self)
-                
+
             % if there aren't enough samples to process, output NaN
             val = NaN;
 
@@ -32,7 +32,7 @@ classdef qam_det < baseProcessors.baseTrigger
 
             % output values
             out.val = val;
-            self.update_log(val);           
+            self.update_log(val);
         end
 
         % log values for posterity

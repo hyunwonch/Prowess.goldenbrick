@@ -130,8 +130,8 @@ classdef chirp_det < baseProcessors.baseEstimator
                 out.est.chirp_rate = chirp_rate;
 
                 % out.est_params goes to downstream nodes (only on detection)
-                out.output_params.fc_est = center_freq; 
-                out.output_params.chirp_rate_est = chirp_rate; 
+                out.output_params.fc_est = center_freq;
+                out.output_params.chirp_rate_est = chirp_rate;
             end
             % out.val goes to the decision logic function
             out.val = val;

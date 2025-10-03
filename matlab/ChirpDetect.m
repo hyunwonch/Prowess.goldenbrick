@@ -13,14 +13,14 @@ det.vals = NaN;
 z = sum(sigIn,1); z = z.';
 z1 = delayseq(z,lag);
 % z1 = [zeros(nn,lag) sigIn(:,1:end)];
-% [Corr lags] = xcorr(sum(z.',2),sum(z1.',2)); 
+% [Corr lags] = xcorr(sum(z.',2),sum(z1.',2));
 Corr = z.*conj(z1);
-AA = abs(fftshift(fft(Corr,nfft)))/nn/nSamp; 
+AA = abs(fftshift(fft(Corr,nfft)))/nn/nSamp;
 det.Corr = AA;
 [pk, ind] = max(AA);
 if ind <= nSamp-30
 [p, in] = findpeaks(AA(ind-30:ind+30));
-else 
+else
 p = [];
 end
 p = sort(p,'descend');
@@ -30,7 +30,7 @@ if isempty(p)
 else
     pval = (pk/2 - p(1))/pk;
 end
-F = linspace(-fs/2,fs/2,nfft); 
+F = linspace(-fs/2,fs/2,nfft);
 det.ChirpRate = 0;
 
 det.Chvals = pval;
@@ -54,7 +54,7 @@ end
 
 % [pk ind] = findpeaks(AA,'MinPeakHeight',approach.detail.thresh);
 % pval = var(ind);
-% 
+%
 %         if length(pk)>=3 && pval<400
 %             det.decision = true ;
 %             det.vals = pval ;

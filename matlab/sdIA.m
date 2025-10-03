@@ -24,9 +24,9 @@ sd_IA = std(Acn);
 vals = sd_IA;
 det.sdIAvals = vals;
 det.IA = instamp;
-        
+
         if vals < approach.detail.thresh
             det.decision = true ;
-            
+
         end
 end

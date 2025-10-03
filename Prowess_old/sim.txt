@@ -1,0 +1,20 @@
+=== CYCLE 0 ===
+pc = 0x0000
+instr = 0xdeadbeef
+reg_a = 5
+reg_b = 7
+result = 12
+
+=== CYCLE 1 ===
+pc = 0x0004
+instr = 0xfeedface
+reg_a = 8
+reg_b = 3
+result = 11
+
+=== CYCLE 2 ===
+pc = 0x0008
+instr = 0x12345678
+reg_a = 2
+reg_b = 2
+result = 4

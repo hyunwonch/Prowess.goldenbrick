@@ -1,0 +1,7 @@
+loop_start, loop_cnt 10
+input cb0-3, output cb2-1
+bank_sel1 1, valid_w1 1, waddr1 45
+bank_sel1 0, wmode1 incr
+bank_sel1 1, valid_r1 1, raddr1 100
+bank_sel2 0, rmode2 dec
+loop_end
